@@ -1,0 +1,175 @@
+body{
+    font-family: "Helvetica", 'Segoe UI';
+    margin: 0;
+}
+.space{
+    display: block;
+    height: 50px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+.site-logo{
+    width: 5em;
+}
+#nav-bar{
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(160deg,blue, red);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#nav-bar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav{
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link{
+    padding: 15px 10px;
+    font-weight: 700;
+}
+.nav-link:hover{
+    color: black;
+    background: orange;
+    border-bottom: 5px solid white;
+    transition: 0.7s background;
+}
+ .active{
+     border-bottom: 5px solid white;
+ }
+ @media (max-width: 768px){
+    #nav-bar{
+        flex-direction: column;
+    }
+    #nav-bar ul{
+        flex-direction: column;
+    }
+    #nav-bar ul li{
+        justify-content: space-between;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav-link{
+        padding: 5px 0;
+    }
+}
+ @media (max-width: 768px){
+     main{
+         margin-top: 200px;
+     }
+ }
+ #main{
+     width: 100%;
+ }
+ .table{
+     background-color: #cccc;
+     width: 100%;
+     height: 400px;
+ }
+ @media (max-width: 768px){
+     .table{
+         height: auto;
+     }
+ }
+ .nav-btn{
+     border-radius: 20px;
+     background-color: cadetblue;
+     padding: 8px;
+ }
+ .nav-btn:hover{
+     background-color: cornflowerblue;
+     color: white;
+ }
+ .banner-title{
+     color: white;
+ }
+ .banner-bg{
+    background: linear-gradient(160deg, blue, red);
+    padding: 4em 0 3rem 0;
+ }
+ .banner-bg ul{
+     display: flex;
+     flex-direction: row;
+     max-width: 100%;
+     list-style: none;
+     font-weight: 800;
+     padding: 0 6em 0 6em;
+ }
+ .banner-bg ul li img{
+    width: 100%;
+}
+ .center{
+     text-align: center;
+}
+.white{
+    color: white;
+}
+#whoarewe{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4em 0 2em 0;
+}
+.para{
+  width: 40%;
+  margin-right: 2em;
+  line-height: 1.5;
+}
+.work-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+.contact div{
+    padding: 4em 0 3em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+input[type=text]{
+    font-size: large;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 18px 0;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    margin: 8px 0 18px 0;
+    font-size: large;
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+.cform{
+    width: 500px;
+    text-align: left;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
