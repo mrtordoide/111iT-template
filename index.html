@@ -18,11 +18,16 @@
                 <a href="#" aria-label="111iT home">
                     <img class="site-logo" src="img/111it-logo-white.svg" alt="111iT">
                 </a>
-                <ul>
-                    <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">IT Services</a></li>
-                    <li><a href="#services" class="nav-link">Software</a></li>
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+                <ul id="primary-menu">
+                    <li><a href="#banner" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#whoarewe" class="nav-link">Company</a></li>
+                    <li><a href="#works" class="nav-link">Portfolio</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <li><a href="#contact" class="nav-btn">Get a quote</a></li>
                 </ul>
@@ -181,7 +186,98 @@
             <p class="footer-bottom">© <span id="y"></span> 111iT. All rights reserved.</p>
         </footer>
         <script>
+            // Footer year
             document.getElementById("y").textContent = new Date().getFullYear();
+
+            // Mobile navigation toggle
+            (function () {
+                var header = document.getElementById("nav-bar");
+                var toggle = header ? header.querySelector(".nav-toggle") : null;
+                var menu = document.getElementById("primary-menu");
+                if (!header || !toggle || !menu) return;
+
+                toggle.addEventListener("click", function () {
+                    var isOpen = header.classList.toggle("nav-open");
+                    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                });
+
+                // Close menu when clicking a link (for single-page anchors)
+                menu.addEventListener("click", function (event) {
+                    if (event.target.tagName === "A") {
+                        header.classList.remove("nav-open");
+                        toggle.setAttribute("aria-expanded", "false");
+                    }
+                });
+            })();
+
+            // Active link based on scroll position
+            (function () {
+                var navLinks = Array.prototype.slice.call(
+                    document.querySelectorAll('#primary-menu a.nav-link')
+                );
+                if (!navLinks.length) return;
+
+                var sections = [
+                    document.getElementById('banner'),
+                    document.getElementById('services'),
+                    document.getElementById('whoarewe'),
+                    document.getElementById('works'),
+                    document.getElementById('contact')
+                ].filter(Boolean);
+                if (!sections.length) return;
+
+                function setActive(hash) {
+                    navLinks.forEach(function (link) {
+                        if (link.getAttribute('href') === hash) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Initial state: Home
+                setActive('#banner');
+
+                // Click behavior stays snappy
+                navLinks.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        var hash = link.getAttribute('href') || '#banner';
+                        setActive(hash);
+                    });
+                });
+
+                var ticking = false;
+
+                function onScroll() {
+                    if (ticking) return;
+                    ticking = true;
+                    window.requestAnimationFrame(function () {
+                        var header = document.getElementById('nav-bar');
+                        var headerHeight = header ? header.getBoundingClientRect().height : 0;
+                        var scrollY = window.scrollY || window.pageYOffset;
+                        var reference = scrollY + headerHeight + 8;
+
+                        var currentSection = sections[0];
+                        sections.forEach(function (section) {
+                            if (section.offsetTop <= reference) {
+                                currentSection = section;
+                            }
+                        });
+
+                        var hash = '#' + currentSection.id;
+                        setActive(hash);
+
+                        ticking = false;
+                    });
+                }
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('resize', onScroll);
+
+                // Run once on load
+                onScroll();
+            })();
         </script>
     </body>
 </html>
