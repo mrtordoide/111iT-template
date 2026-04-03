@@ -1,91 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>111iT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="111iT — Sydney-based IT consulting, software development, and digital services for ambitious teams.">
+        <title>111iT — IT Consulting &amp; Development</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
         <link href="css/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <!-- navigation bar -->
+        <a class="skip-link" href="#main">Skip to content</a>
+
         <header id="nav-bar">
-            <!-- wrapper for nav bar -->
-            <section class="nav">
-                <img class="site-logo" src="img/111it-logo-white.svg">
-                <!--- menu items -->
+            <nav class="nav" aria-label="Primary">
+                <a href="#" aria-label="111iT home">
+                    <img class="site-logo" src="img/111it-logo-white.svg" alt="111iT">
+                </a>
                 <ul>
                     <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#" class="nav-link">IT Services</a></li>
-                    <li><a href="#" class="nav-link">Software Services</a></li>
-                    <li><a href="#" class="nav-link">Company</a></li>
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                    <li><a href="#" class="nav-btn">Get a quote</a></li>
+                    <li><a href="#services" class="nav-link">IT Services</a></li>
+                    <li><a href="#services" class="nav-link">Software</a></li>
+                    <li><a href="#whoarewe" class="nav-link">Company</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#contact" class="nav-btn">Get a quote</a></li>
                 </ul>
-                <!--- end menu items -->
-            </section>
-            <!-- end wrapper for nav bar -->
+            </nav>
         </header>
-        <!--- end navigation bar-->
 
-        <!--- Start main -->
         <main id="main">
-        <section id="banner">
-            <span class="space"></span>
-            
-            <div class="table">
+            <section id="banner" aria-labelledby="hero-heading">
+                <div class="hero-inner">
+                    <p class="hero-eyebrow">Sydney · Since day one</p>
+                    <h1 id="hero-heading" class="hero-title">Engineering clarity for your IT and product roadmap</h1>
+                    <p class="hero-lead">We help organisations design reliable infrastructure, ship quality software, and grow with confidence—backed by certified engineers and a decade of delivery.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">Start a conversation</a>
+                        <a href="#services" class="btn-ghost">Explore services</a>
+                    </div>
+                    <div class="hero-stats" role="list">
+                        <div class="hero-stat" role="listitem">
+                            <strong>10+</strong>
+                            <span>Years experience</span>
+                        </div>
+                        <div class="hero-stat" role="listitem">
+                            <strong>End-to-end</strong>
+                            <span>From network to app</span>
+                        </div>
+                        <div class="hero-stat" role="listitem">
+                            <strong>Certified</strong>
+                            <span>Cisco &amp; Microsoft</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            </div>
-        </section>
-        <section id="services" class="banner-bg center white">
-            <h1 class="banner-title">Our Services</h1>
-            <ul>
-                <li><img src="img/circle.png"><br> IT Services </li>
-                <li><img src="img/circle.png"><br> Web Design </li>
-                <li><img src="img/circle.png"><br> Software Development </li>
-                <li><img src="img/circle.png"><br> Digital Marketing </li>
-            </ul>
-        </section>
-        <section id="whoarewe">
-            <div class="para">
-                <h1> Who are we? </h1>
-                <p>We are sydney based IT firm with highly qualified and experienced team of software developers, designers, network engineers and system administrators. Our engineers are CISCO certified and microsoft certified associates who are experienced in the related field for more than 10 years with a vision to deliver quality services to our clients.<br /><br />
-                We have in-house designers and developers with extensive knowledge in web, desktop and mobile application development. Our developers vast experience in JAVA, SPRING FRAMEWORK, HIBERNATE, SWIFT, PHP, LAVARVEL, HTML, CSS, Bootstrap JAVASCRIPT, ANGULARJS, WordPress and other newer and robust technology.
-                </p>
-            </div>
-            <iframe width="40%" height="400" src="https://www.youtube.com/embed/Xzh8BdaaAvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-        <section id="works" class="banner-bg center white">
-            <h1 class="banner-title"> Our Works </h1>
-            <div class="work-list">
-                <img src="img/square.png">
-                <img src="img/square.png">
-                <img src="img/square.png">
-                <img src="img/square.png">
+            <section id="services" class="section center white" aria-labelledby="services-heading">
+                <div class="section-inner">
+                    <header class="section-head">
+                        <p class="section-eyebrow">What we do</p>
+                        <h2 id="services-heading" class="section-title">Services built for real operations</h2>
+                        <p class="section-desc">Infrastructure, applications, and growth—structured so your team can focus on the work that matters.</p>
+                    </header>
+                    <ul class="service-grid">
+                        <li class="service-card">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                            </div>
+                            <h2>IT services</h2>
+                            <p>Networks, systems, and support with certified engineers who understand uptime and security.</p>
+                        </li>
+                        <li class="service-card">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                            </div>
+                            <h2>Web design</h2>
+                            <p>Interfaces that communicate trust—fast, accessible, and aligned with your brand.</p>
+                        </li>
+                        <li class="service-card">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <h2>Software development</h2>
+                            <p>Web, desktop, and mobile—modern stacks, maintainable code, sensible architecture.</p>
+                        </li>
+                        <li class="service-card">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <h2>Digital marketing</h2>
+                            <p>Reach the right audience with campaigns grounded in measurement and iteration.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-            </div>
-            <div class="work-list">
-                <img src="img/square.png">
-                <img src="img/square.png">
-                <img src="img/square.png">
-                <img src="img/square.png">
+            <section id="whoarewe" class="section" aria-labelledby="about-heading">
+                <div class="section-inner about-layout">
+                    <div class="about-copy para">
+                        <h2 id="about-heading">Who are we?</h2>
+                        <p>We are a Sydney-based IT firm with a highly qualified and experienced team of software developers, designers, network engineers, and system administrators. Our engineers include Cisco-certified and Microsoft-certified associates with more than ten years in the field, focused on delivering quality outcomes for clients.</p>
+                        <p>We have in-house designers and developers with deep experience in web, desktop, and mobile application development. Our stack spans Java, Spring, Hibernate, Swift, PHP, Laravel, HTML, CSS, Bootstrap, JavaScript, AngularJS, WordPress, and other robust, modern technologies.</p>
+                    </div>
+                    <div class="video-wrap">
+                        <iframe title="111iT introduction video" src="https://www.youtube.com/embed/Xzh8BdaaAvs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
 
-            </div>
-        </section>
-        <section id="contact" class="contact center">
-            <h1> Contact Us</h1>
-            <div>
-                <form class="cform">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your message here..."></textarea>
-                </form>
-            </div>
-        </section>
+            <section id="works" class="section center white" aria-labelledby="works-heading">
+                <div class="section-inner">
+                    <header class="section-head">
+                        <p class="section-eyebrow">Portfolio</p>
+                        <h2 id="works-heading" class="section-title">Selected work</h2>
+                        <p class="section-desc">Representative engagements—replace placeholders with your case studies when ready.</p>
+                    </header>
+                    <div class="work-rows">
+                        <div class="work-list">
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder one"><figcaption>Enterprise platform</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder two"><figcaption>Cloud migration</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder three"><figcaption>Customer portal</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder four"><figcaption>Mobile companion</figcaption></figure>
+                        </div>
+                        <div class="work-list">
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder five"><figcaption>Data integration</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder six"><figcaption>Security review</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder seven"><figcaption>Design system</figcaption></figure>
+                            <figure class="work-card"><img src="img/square.png" alt="Project placeholder eight"><figcaption>Growth site</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section contact center" aria-labelledby="contact-heading">
+                <div class="section-inner">
+                    <header class="section-head">
+                        <p class="section-eyebrow">Contact</p>
+                        <h2 id="contact-heading" class="section-title">Tell us about your project</h2>
+                        <p class="section-desc">We will get back to you with next steps. Fields below are a starting point—wire to your backend when you are ready.</p>
+                    </header>
+                    <div class="contact-form-wrap">
+                        <form class="cform" action="#" method="post">
+                            <label for="contact-name">Name</label>
+                            <input id="contact-name" name="name" type="text" placeholder="Your name" autocomplete="name">
+                            <label for="contact-subject">Subject</label>
+                            <input id="contact-subject" name="subject" type="text" placeholder="What can we help with?">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" placeholder="Goals, timeline, and any technical context…"></textarea>
+                            <button type="submit" class="btn-primary">Send message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
+
         <footer id="footer" class="banner-bg center white">
-            <div><img width="15%" src="img/111it-logo-white.svg"></div>
-            <div>Contact</div>
-            <div>Email</div>
-            <div>Address</div>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="img/111it-logo-white.svg" alt="111iT">
+                    <p>IT consulting and software development from Sydney—built for teams that need reliability and speed.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Phone</p>
+                    <a href="mailto:hello@111it.example">hello@111it.example</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit</h3>
+                    <p>Sydney, Australia</p>
+                    <a href="#contact">Request address</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <a href="#services">Services</a>
+                    <a href="#works">Work</a>
+                    <a href="#whoarewe">Company</a>
+                </div>
+            </div>
+            <p class="footer-bottom">© <span id="y"></span> 111iT. All rights reserved.</p>
         </footer>
-        <!--- End main -->
+        <script>
+            document.getElementById("y").textContent = new Date().getFullYear();
+        </script>
     </body>
 </html>
